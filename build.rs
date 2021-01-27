@@ -4,7 +4,6 @@ use std::path::PathBuf;
 const VERSION: &'static str = "b24588fe050a230f79666b50495f1f239aa537d9";
 
 fn main() {
-    // assert!(false, "OUT_DIR={:?}", PathBuf::from(std::env::var("OUT_DIR").expect("No OUT_DIR.")));
     let mut current_dir = PathBuf::from(std::env::var("OUT_DIR").expect("No OUT_DIR."));
     if !current_dir.join("Hoard").exists() {
         let mut git = Command::new("git");
